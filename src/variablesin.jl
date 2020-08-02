@@ -12,7 +12,7 @@ function variablesin(x::Variable, id2var = Dict{UInt64, Variable}())
   return Set{UInt64}([myid])
 end
 variablesin(x::Constant, id2var = Dict{UInt64, Variable}()) = Set{UInt64}()
-function variablesin(x::AbstractExpr, id2var = Dict{UInt64, Variable}())
+function variablesin(x::Convex.AbstractExpr, id2var = Dict{UInt64, Variable}())
   myvars = Set{UInt64}()
   for child in x.children
     union!(myvars, variablesin(child, id2var))
