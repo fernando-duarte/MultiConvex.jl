@@ -1,4 +1,4 @@
-import MathProgBase, Convex.conic_form!, Convex.SolverOrModel, Convex.get_default_solver
+import MathProgBase, Convex.conic_form!, Convex.SolverOrModel
 import Convex
 
 export altmin!
