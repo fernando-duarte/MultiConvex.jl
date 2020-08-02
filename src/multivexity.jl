@@ -1,10 +1,10 @@
-import Convex.MultiplyAtom
+import Convex.MultiplyAtom, Convex.Vexity
 
 export multivexity
 
-abstract type MultiAffineVexity <: Vexity             end
-abstract type MultiConvexVexity <: Vexity             end
-abstract type MultiConcaveVexity <: Vexity            end
+abstract type MultiAffineVexity <: Convex.Vexity             end
+abstract type MultiConvexVexity <: Convex.Vexity             end
+abstract type MultiConcaveVexity <: Convex.Vexity            end
 
 multi(v::ConvexVexity) = MultiConvexVexity()
 
