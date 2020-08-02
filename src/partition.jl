@@ -1,6 +1,6 @@
 export stablepartition!, isstableset
 
-function isstableset(S::Set{T}, E::Set{@compat Tuple{T,T}})::T
+function isstableset(S::Set{T}, E::Set{@compat Tuple{T,T}})
   for (i,j) in E
     if i in S && j in S
       return false
@@ -10,7 +10,7 @@ function isstableset(S::Set{T}, E::Set{@compat Tuple{T,T}})::T
 end
 
 function stablepartition!(conflicts::Set{@compat Tuple{T, T}},
-                             stablesets::Array{Set{T}, 1} = Set{T}[])::T
+                             stablesets::Array{Set{T}, 1} = Set{T}[])
 
   # elements already in stablesets are already taken care of
   prepartitioned = union(stablesets...)
@@ -47,7 +47,7 @@ end
 # returns a list of stable sets in the graph whose union is the full set of nodes
 # uses a greedy algorithm
 function stablepartition!(id2neighborid::Dict{T, Set{T}},
-                             stablesets::Array{Set{T}, 1} = Set{T}[])::T
+                             stablesets::Array{Set{T}, 1} = Set{T}[])
   for varid in keys(id2neighborid)
     foundhome = false
     varid in id2neighborid[varid] && error("cannot partition graph with self loop")
