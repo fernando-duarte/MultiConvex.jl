@@ -27,7 +27,7 @@ function variablesin(x, id2var = Dict{UInt64, Variable}())
 end
 
 # Minkowski or outer product of sets
-function outerproduct(s::Set{T}, t::Set{T})::T
+function outerproduct(s::Set{T}, t::Set{T})
   results = Set{@compat Tuple{T,T}}()
   for si in s
     for ti in t
