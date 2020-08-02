@@ -1,3 +1,4 @@
+using Convex
 export variablesin
 
 hash(x::AbstractExpr) = x.id_hash
