@@ -4,7 +4,7 @@ import Convex
 export altmin!
 
 function altmin!(problem::Problem,
-                s::MathProgBase.AbstractMathProgSolver=get_default_solver();
+                s::MathProgBase.AbstractMathProgSolver=DEFAULT_SOLVER;
                 warmstart=true, maxAMiters=5)
 
   obj_vex, stablesets, vars = multivexity(problem)
