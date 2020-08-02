@@ -6,7 +6,7 @@ abstract type MultiAffineVexity <: Convex.Vexity             end
 abstract type MultiConvexVexity <: Convex.Vexity             end
 abstract type MultiConcaveVexity <: Convex.Vexity            end
 
-multi(v::ConvexVexity) = MultiConvexVexity()
+multi(v::Convex.Vexity) = MultiConvexVexity()
 
 # notes:
 # * may add conflicts twice since (x,y) is different (as a tuple) from (y,x)
