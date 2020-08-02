@@ -1,6 +1,6 @@
 export stablepartition!, isstableset
 
-function isstableset(S::Set{T}, E::Set{@compat Tuple{T,T}})
+function isstableset(S::Set{T}, E::Set{Tuple{T,T}})
   for (i,j) in E
     if i in S && j in S
       return false
@@ -9,7 +9,7 @@ function isstableset(S::Set{T}, E::Set{@compat Tuple{T,T}})
   return true
 end
 
-function stablepartition!(conflicts::Set{@compat Tuple{T, T}},
+function stablepartition!(conflicts::Set{Tuple{T, T}},
                              stablesets::Array{Set{T}, 1} = Set{T}[])
 
   # elements already in stablesets are already taken care of
