@@ -1,0 +1,17 @@
+name = "MultiConvex"
+uuid = "3c3b0720-4001-4a67-a3cd-4b4d9d0c7f94"
+authors = ["madeleineudell"]
+version = "0.1.0"
+
+[compat]
+julia = "^1.0"
+Compat = "^0.4.4"
+Convex = "^0.0.6"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+Compat = "34da2185-b29b-5c13-b0c7-acf172513d20"
+Convex = "f65535da-76fb-5f13-bab9-19810c17039a"
+
+[targets]
+test = ["Test"]
