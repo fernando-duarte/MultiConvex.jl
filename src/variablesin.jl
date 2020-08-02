@@ -1,4 +1,3 @@
-import MathProgBase, Convex.conic_form!, Convex.SolverOrModel, Convex.get_default_solver
 import Convex
 export variablesin
 
