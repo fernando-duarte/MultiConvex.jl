@@ -1,7 +1,7 @@
 import Convex
 export variablesin
 
-hash(x::AbstractExpr) = x.id_hash
+hash(x::Convex.AbstractExpr) = x.id_hash
 
 # TODO memoize variables in expressions
 
