@@ -15,7 +15,7 @@ multi(v::ConvexVexity) = MultiConvexVexity()
 # supposing ...
 # records id to variable mapping and
 # adds conflicts to `conflicts`
-function multicurvature(x::AbstractExpr,
+function multicurvature(x::Convex.AbstractExpr,
                         conflicts = Set{@compat Tuple{UInt64, UInt64}}(),
                         id2var = Dict{UInt64, Variable}())
   return curvature(x)
@@ -39,7 +39,7 @@ end
 multivexity(x::Variable, conflicts, id2var) = vexity(x)
 multivexity(x::Constant, conflicts, id2var) = vexity(x)
 
-function multivexity(x::AbstractExpr,
+function multivexity(x::Convex.AbstractExpr,
                      conflicts = Set{@compat Tuple{UInt64, UInt64}}(),
                      id2var = Dict{UInt64, Variable}())
   monotonicities = monotonicity(x)
@@ -50,7 +50,7 @@ function multivexity(x::AbstractExpr,
   return vex
 end
 
-function multivexity(x::AbstractExpr)
+function multivexity(x::Convex.AbstractExpr)
   conflicts = Set{@compat Tuple{UInt64, UInt64}}()
   id2var = Dict{UInt64, Variable}()
   return multivexity(x, conflicts, id2var), conflicts, id2var
