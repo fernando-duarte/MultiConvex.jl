@@ -2,9 +2,9 @@ import Convex.MultiplyAtom
 
 export multivexity
 
-type MultiAffineVexity <: Vexity             end
-type MultiConvexVexity <: Vexity             end
-type MultiConcaveVexity <: Vexity            end
+abstract type MultiAffineVexity <: Vexity             end
+abstract type MultiConvexVexity <: Vexity             end
+abstract type MultiConcaveVexity <: Vexity            end
 
 multi(v::ConvexVexity) = MultiConvexVexity()
 
